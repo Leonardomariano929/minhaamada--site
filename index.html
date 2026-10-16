@@ -1,135 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriela Jose | Meu Sonho, Meu Mundo - Minha Amada</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#1a0a14;color:#ffd1dc;font-family:'Poppins',sans-serif;overflow-x:hidden}
-.hero{height:100vh;position:relative;background:radial-gradient(ellipse at center,#4a2040 0%,#1a0a14 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,107,157,0.15) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(212,175,55,0.12) 0%,transparent 50%)}
-.stars{position:absolute;inset:0;pointer-events:none}
-.star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:twinkle 3s infinite}
-@keyframes twinkle{0%,100%{opacity:0.3}50%{opacity:1;box-shadow:0 0 10px white}}
-.crown{font-size:clamp(80px,15vw,160px);filter:drop-shadow(0 0 30px gold);animation:floatCrown 4s ease-in-out infinite;position:relative;z-index:2}
-@keyframes floatCrown{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.name{font-family:'Cinzel',serif;font-size:clamp(42px,9vw,110px);font-weight:600;background:linear-gradient(180deg,#fff 0%,#ffd700 20%,#fff8cc 40%,#d4af37 60%,#fff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(255,215,0,0.6)) drop-shadow(0 4px 10px rgba(0,0,0,0.8));letter-spacing:2px;position:relative;z-index:2;line-height:1}
-.subtitle{font-family:'Great Vibes',cursive;font-size:clamp(24px,4vw,44px);color:#ffb3d1;margin-top:10px;position:relative;z-index:2;text-shadow:0 0 20px rgba(255,107,157,0.6)}
-.btns{display:flex;gap:15px;margin-top:35px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2}
-.btn-primary{padding:16px 36px;background:linear-gradient(135deg,#ffd1a1,#ffb3d1);color:#4a2040;border:none;border-radius:50px;font-weight:700;letter-spacing:1px;cursor:pointer;box-shadow:0 8px 30px rgba(255,107,157,0.4);transition:0.3s;text-decoration:none;display:inline-block}
-.btn-secondary{padding:16px 36px;background:transparent;color:#ffd1dc;border:1px solid rgba(255,209,220,0.4);border-radius:50px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:0.3s}
-.music-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(26,10,20,0.9);backdrop-filter:blur(12px);padding:12px 20px;display:flex;align-items:center;gap:15px;z-index:100;border-top:1px solid rgba(255,209,220,0.1)}
-.progress{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:3px}
-.progress-fill{width:38%;height:100%;background:linear-gradient(90deg,#ff6b9d,#d4af37);border-radius:3px;transition:0.2s}
-.section{padding:80px 5%;max-width:1200px;margin:0 auto}
-.glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border:1px solid rgba(255,209,220,0.1);border-radius:24px;padding:40px}
-.login-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
-@media(max-width:900px){.login-grid{grid-template-columns:1fr}}
-.input{width:100%;padding:14px 18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,209,220,0.2);border-radius:12px;color:white;outline:none;margin-bottom:14px}
-.input:focus{border-color:#ff6b9d;box-shadow:0 0 0 3px rgba(255,107,157,0.15)}
-.hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:0.35}
-.heart{position:absolute;font-size:20px;animation:heartFloat 7s ease-in-out infinite}
-@keyframes heartFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Amada - Seguro</title>
 </head>
-<body>
-<div class="hero" id="hero">
-<div class="stars" id="stars"></div>
-<div class="hearts" id="hearts"></div>
-<div style="position:absolute;top:20px;left:5%;right:5%;display:flex;justify-content:space-between;align-items:center;z-index:10;font-size:11px;letter-spacing:2px;opacity:0.7">
-<span>👑 GABRIELA JOSE</span><span>HOME • HISTORIA • GALERIA • CONTATO</span><span>🔍 👤 💖</span>
-</div>
-<div class="crown">👑</div>
-<div class="name">Gabriela José</div>
-<div class="subtitle">Meu Sonho ♡ Meu Mundo</div>
-<div class="btns">
-<a class="btn-primary" href="#conteudo">EXPLORE MEU SONHO</a>
-<button class="btn-secondary" onclick="alert('🎬 Nossa história em vídeo em breve! 💖')">▶ WATCH STORY</button>
-</div>
-<div style="margin-top:50px;font-size:11px;letter-spacing:3px;opacity:0.5;z-index:2">SCROLL TO DISCOVER ↓</div>
-</div>
+<body style="font-family: sans-serif; padding: 20px;">
+<h2>🔐 Área Restrita</h2>
 
-<div class="music-bar">
-<span style="font-size:12px;letter-spacing:1px">NOW PLAYING • ROMANTIC JOURNEY</span>
-<div class="progress"><div class="progress-fill" id="progressFill"></div></div>
-<span style="font-size:12px">00:12 / 02:30</span>
-<span style="cursor:pointer" onclick="toggleMusic()" id="musicToggle">⏸️ 🔊</span>
-</div>
+<input id="senha" type="password" placeholder="Senha mestra" style="padding:10px; width:100%; max-width:300px;">
+<button onclick="entrar()" style="padding:10px;">Desbloquear</button>
 
-<audio id="bgMusic" loop><source src="https://cdn.pixabay.com/audio/2022/10/30/audio_8ef06a6f5a.mp3" type="audio/mpeg"></audio>
-
-<section id="conteudo" class="section">
-<div style="text-align:center;margin-bottom:50px">
-<h2 style="font-family:'Great Vibes',cursive;font-size:48px;color:#ffb3d1">Nossos Momentos Eternos</h2>
-<p style="opacity:0.6;margin-top:10px">Os flyers oficiais da nossa rainha - 9 de Outubro</p>
-</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:25px">
-<div class="glass" style="text-align:center">
-<div style="height:420px;background:linear-gradient(135deg,#ff6b9d,#ffd1dc);border-radius:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;font-weight:700;padding:20px">
-<div style="font-size:50px">🌸</div><div style="font-family:'Great Vibes',cursive;font-size:32px;margin-top:10px">Gabriela José</div><div style="font-size:13px;margin-top:6px">ANIVERSÁRIO ROSA<br>Meu Sonho, meu mundo!</div>
-</div>
-<p style="margin-top:15px;font-weight:600">Versão Dia - Luxo Rosa</p>
-<button class="btn-primary" style="width:100%;margin-top:12px" onclick="alert('Coloque seus flyers na mesma pasta com nome flyer-rosa.webp 💖')">Baixar Flyer Rosa</button>
-</div>
-<div class="glass" style="text-align:center">
-<div style="height:420px;background:linear-gradient(135deg,#4a2040,#1a0a14);border:1px solid gold;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:gold;font-weight:700;padding:20px">
-<div style="font-size:50px">👑</div><div style="font-family:'Cinzel',serif;font-size:28px;margin-top:10px">Gabriela José</div><div style="font-size:13px;margin-top:6px;color:#ffb3d1">NOTURNA GLAM<br>Minha obra-prima</div>
-</div>
-<p style="margin-top:15px;font-weight:600">Versão Noite - Noturna Glam</p>
-<button class="btn-primary" style="width:100%;margin-top:12px;background:#4a2040;color:gold;border:1px solid gold" onclick="alert('Coloque seus flyers na mesma pasta com nome flyer-vinho.webp 👑')">Baixar Flyer Vinho</button>
-</div>
-</div>
-
-<div class="login-grid">
-<div class="glass" style="position:relative;overflow:hidden">
-<div class="hearts" id="hearts2"></div>
-<h3>💌 Acesso Secreto</h3>
-<p style="font-size:13px;opacity:0.6;margin:8px 0 18px;position:relative;z-index:2">Só quem tem a chave do nosso amor entra</p>
-<input class="input" id="loginId" placeholder="Telefone ou E-mail" style="position:relative;z-index:2">
-<input class="input" id="loginPass" type="password" placeholder="Senha" style="position:relative;z-index:2">
-<button class="btn-primary" style="width:100%;position:relative;z-index:2" onclick="login()">Entrar no Nosso Mundo 💖</button>
-<div style="margin-top:15px;display:flex;gap:8px;position:relative;z-index:2">
-<a href="https://wa.me/244900000000?text=Oi%20amor%20do%20site%20Minha%20Amada" target="_blank" style="flex:1;text-align:center;padding:10px;background:#25D366;color:white;border-radius:8px;text-decoration:none;font-size:12px">WhatsApp</a>
-<a href="https://facebook.com" target="_blank" style="flex:1;text-align:center;padding:10px;background:#1877F2;color:white;border-radius:8px;text-decoration:none;font-size:12px">Facebook</a>
-<a href="https://instagram.com" target="_blank" style="flex:1;text-align:center;padding:10px;background:linear-gradient(45deg,#feda75,#d62976);color:white;border-radius:8px;text-decoration:none;font-size:12px">Instagram</a>
-</div>
-</div>
-<div class="glass">
-<h3>🌸 Criar Nossa Conta</h3>
-<p style="font-size:13px;opacity:0.6;margin:8px 0 18px">Primeira vez? Crie nosso cantinho</p>
-<input class="input" id="regPhone" placeholder="Telefone +244">
-<input class="input" id="regEmail" placeholder="E-mail">
-<input class="input" id="regPass" type="password" placeholder="Senha (min 6)">
-<button class="btn-primary" style="width:100%;background:linear-gradient(135deg,#d4af37,#ff6b9d)" onclick="register()">Criar Conta 💍</button>
-<p style="font-size:11px;opacity:0.5;margin-top:10px;text-align:center">Banco de dados salvo - não apaga ao atualizar</p>
-</div>
-</div>
-</section>
-
-<footer style="text-align:center;padding:40px 5%;border-top:1px solid rgba(255,209,220,0.1);opacity:0.6;font-size:12px">
-💖 Minha Amada • Feito com amor para Gabriela José<br>
-Copyright © 2026 Minha Amada - Todos os direitos reservados • Meu Sonho, meu mundo!<br>
-<div style="margin-top:12px">
-<a href="https://wa.me/244900000000" style="color:#ffd1dc;text-decoration:none;margin:0 8px">WhatsApp</a>
-<a href="https://facebook.com" style="color:#ffd1dc;text-decoration:none;margin:0 8px">Facebook</a>
-<a href="https://instagram.com" style="color:#ffd1dc;text-decoration:none;margin:0 8px">Instagram</a>
-</div>
-</footer>
+<div id="resultado" style="margin-top:20px; padding:15px; border:1px solid #ddd; display:none;"></div>
 
 <script>
-const starsC=document.getElementById('stars');
-for(let i=0;i<90;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';starsC.appendChild(s);}
-function addHearts(id){const c=document.getElementById(id);if(!c)return;for(let i=0;i<15;i++){const h=document.createElement('div');h.className='heart';h.innerHTML=['💖','💗','💕','💞'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.top=Math.random()*100+'%';h.style.animationDelay=Math.random()*5+'s';c.appendChild(h);}}
-addHearts('hearts');addHearts('hearts2');
-let playing=false;const music=document.getElementById('bgMusic');music.volume=0.35;
-function toggleMusic(){if(playing){music.pause();document.getElementById('musicToggle').innerText='🔇';playing=false}else{music.play();document.getElementById('musicToggle').innerText='⏸️ 🔊';playing=true}}
-document.addEventListener('click',()=>{if(!playing){music.play().then(()=>{playing=true;document.getElementById('musicToggle').innerText='⏸️ 🔊'}).catch(()=>{})}},{once:true});
-function getDB(){return JSON.parse(localStorage.getItem('minhaAmadaDB')||'[]')}
-function saveDB(d){localStorage.setItem('minhaAmadaDB',JSON.stringify(d))}
-function register(){const p=document.getElementById('regPhone').value.trim();const e=document.getElementById('regEmail').value.trim().toLowerCase();const s=document.getElementById('regPass').value;if(!p||!e||!s){alert('Preencha tudo!');return}if(s.length<6){alert('Senha min 6!');return}let db=getDB();if(db.find(u=>u.email===e)){alert('E-mail já cadastrado!');return}if(db.find(u=>u.phone===p)){alert('Telefone já cadastrado!');return}db.push({phone:p,email:e,pass:s});saveDB(db);alert('Conta criada! 💖');}
-function login(){const id=document.getElementById('loginId').value.trim().toLowerCase();const pass=document.getElementById('loginPass').value;if(!id||!pass){alert('Digite e-mail/telefone e senha!');return}let db=getDB();const u=db.find(x=>(x.email===id||x.phone===id)&&x.pass===pass);if(!u){alert('Dados incorretos!');return}alert('Bem-vinda ao nosso mundo, Gabriela José! 👑💖');}
-let w=38;setInterval(()=>{if(playing){w=(w+0.08)%100;document.getElementById('progressFill').style.width=w+'%'}},200);
+const FIREBASE = "https://minhaamada-site-default-rtdb.firebaseio.com";
+const HASH_SENHA = "80daab123e5f07377d4b3caab553975cbdfc168b0cb91f081c8f7bab0353ca53";
+const HASH_EMAIL = "5049deae6644ef4bcbfc443554377caf3908e2ac0a00fa4fcc369aba9b961afa";
+
+async function sha256(t){
+  const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+
+async function entrar(){
+  const s = document.getElementById("senha").value;
+  const h = await sha256(s);
+  
+  if(h !== HASH_SENHA){
+    alert("Senha incorreta!");
+    return;
+  }
+
+  // Senha correta -> busca contatos do Firebase (não estão mais no código)
+  const res = await fetch(`${FIREBASE}/secureContacts.json`);
+  const c = await res.json();
+
+  // Verifica e-mail pelo hash também
+  const emailHashCheck = await sha256(c.adminEmail);
+  
+  document.getElementById("resultado").style.display = "block";
+  document.getElementById("resultado").innerHTML = `
+    <b>✅ Desbloqueado com sucesso!</b><br><br>
+    <b>Contatos carregados do Firebase:</b><br>
+    WhatsApp: ${c.wa}<br>
+    Facebook: ${c.fb}<br>
+    Instagram: ${c.ig}<br><br>
+    <b>Admin:</b> ${c.adminEmail}<br>
+    <small>Hash verificado: ${emailHashCheck === HASH_EMAIL ? "✔ Correto" : "✖ Erro"}</small>
+  `;
+  
+  localStorage.setItem("logado", "true");
+}
 </script>
 </body>
 </html>
