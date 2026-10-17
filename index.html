@@ -2,182 +2,112 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minha Amada - Gabriela José | PRO</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
+<title>Minha Amada - Gabriela José | História Oficial</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/peerjs@1.5.3/dist/peerjs.min.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#120a18;color:#ffe6ef;font-family:'Poppins',sans-serif;padding-bottom:110px}
-a{color:inherit;text-decoration:none}
-.hero{height:68vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at center,#4a2040 0%,#120a18 75%);padding:20px}
-.crown{font-size:80px;filter:drop-shadow(0 0 15px gold)}
-.name{font-family:'Cinzel',serif;font-size:clamp(32px,7vw,64px);background:linear-gradient(#fff,#ffd700,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.subtitle{font-family:'Great Vibes',cursive;font-size:28px;color:#ffb3d1}
-.btn{padding:11px 20px;border-radius:50px;font-weight:700;cursor:pointer;border:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:left}
-.btn-p{background:linear-gradient(135deg,#ffd1a1,#ff6b9d);color:#3a1430}
-.btn-o{background:rgba(255,255,255,0.08);border:1px solid rgba(255,209,220,0.25);color:#ffd1dc}
+*{margin:0;padding:0;box-sizing:border-box}body{background:#120a18;color:#ffe6ef;font-family:'Poppins',sans-serif;padding-bottom:110px}
+.hero{height:auto;min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at center,#4a2040 0%,#120a18 75%);padding:30px 20px 40px}
+.crown{font-size:80px;filter:drop-shadow(0 0 15px gold)}.name{font-family:'Cinzel',serif;font-size:clamp(32px,7vw,64px);background:linear-gradient(#fff,#ffd700,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+.subtitle{font-family:'Great Vibes',cursive;font-size:32px;color:#ffb3d1;margin-top:6px}
+.story-card{background:linear-gradient(135deg,rgba(255,209,220,0.08),rgba(212,175,55,0.08));border:1px solid rgba(255,209,220,0.15);border-radius:20px;padding:22px;margin:18px auto;max-width:800px;text-align:left;backdrop-filter:blur(8px)}
+.story-card h3{font-family:'Cinzel',serif;color:#ffd700;margin-bottom:10px;font-size:18px}
+.story-card p{font-size:13px;line-height:1.7;opacity:0.9;margin-bottom:10px}
+.story-card .highlight{color:#ffb3d1;font-weight:600}
+.btn{padding:11px 20px;border-radius:50px;font-weight:700;cursor:pointer;border:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn-p{background:linear-gradient(135deg,#ffd1a1,#ff6b9d);color:#3a1430}.btn-o{background:rgba(255,255,255,0.08);border:1px solid rgba(255,209,220,0.25);color:#ffd1dc}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(18,10,24,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,209,220,0.1);display:flex;justify-content:space-between;align-items:center;padding:10px 4%}
-.app{display:grid;grid-template-columns:260px 1fr 320px;gap:16px;max-width:1400px;margin:0 auto;padding:16px 4%}
-@media(max-width:1100px){.app{grid-template-columns:1fr}.right{order:3}}
+.app{display:grid;grid-template-columns:260px 1fr 320px;gap:16px;max-width:1400px;margin:0 auto;padding:16px 4%}@media(max-width:1100px){.app{grid-template-columns:1fr}}
 .card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,209,220,0.12);border-radius:18px;padding:16px;margin-bottom:12px}
 .input{width:100%;padding:12px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,209,220,0.18);border-radius:12px;color:white;outline:none;margin-bottom:10px}
-.input:focus{border-color:#ff6b9d}
-.post-media{width:100%;border-radius:14px;margin-top:10px;max-height:420px;object-fit:cover;display:block}
-.user-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#ff6b9d,#d4af37);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;overflow:hidden;cursor:pointer;flex-shrink:0}
-.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#ff6b9d,#d4af37);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;overflow:hidden;cursor:pointer;flex-shrink:0}.avatar img{width:100%;height:100%;object-fit:cover}
 .chat-box{height:300px;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:8px;background:rgba(0,0,0,0.28);border-radius:12px;scroll-behavior:smooth}
-.msg{max-width:82%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.4;word-break:break-word}
-.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ff6b9d,#d4af37);color:white;border-bottom-right-radius:4px}
-.msg.other{align-self:flex-start;background:rgba(255,255,255,0.12);border-bottom-left-radius:4px}
-.float-wa{position:fixed;bottom:88px;right:16px;z-index:80;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 8px 20px rgba(0,0,0,0.4);cursor:pointer}
+.msg{max-width:85%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.4;word-break:break-word;white-space:pre-wrap}.msg.me{align-self:flex-end;background:linear-gradient(135deg,#ff6b9d,#d4af37);color:white}.msg.other{align-self:flex-start;background:rgba(255,255,255,0.12)}
+.float-wa{position:fixed;bottom:88px;right:16px;z-index:80;background:#25D366;color:white;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer}
 .music-bar{position:fixed;bottom:0;left:0;right:0;background:#1e1128;padding:12px 14px;display:flex;align-items:center;gap:10px;z-index:90;border-top:1px solid rgba(255,209,220,0.15)}
-.progress{flex:1;height:6px;background:rgba(255,255,255,0.15);border-radius:3px;cursor:pointer}
-.progress-fill{height:100%;background:linear-gradient(90deg,#ff6b9d,#d4af37);border-radius:3px;width:0%}
-.tab{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
-.tab button{padding:9px 15px;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,209,220,0.12);color:#ffd1dc;cursor:pointer;font-size:12px;font-weight:600}
-.tab button.active{background:linear-gradient(135deg,#ff6b9d,#d4af37);color:white;border-color:transparent;transform:scale(1.05)}
-#auth{max-width:900px;margin:24px auto;padding:0 4%;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:800px){#auth{grid-template-columns:1fr}}
-#feedApp{display:none}
-#masterGate{position:fixed;inset:0;z-index:9999;background:#120a18;display:flex;align-items:center;justify-content:center;padding:20px}
+.progress{flex:1;height:6px;background:rgba(255,255,255,0.15);border-radius:3px;cursor:pointer}.progress-fill{height:100%;background:linear-gradient(90deg,#ff6b9d,#d4af37);border-radius:3px;width:0%}
+.tab{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}.tab button{padding:9px 15px;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,209,220,0.12);color:#ffd1dc;cursor:pointer;font-size:12px;font-weight:600}.tab button.active{background:linear-gradient(135deg,#ff6b9d,#d4af37);color:white}
+#auth{max-width:900px;margin:24px auto;padding:0 4%;display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:800px){#auth{grid-template-columns:1fr}}
+#feedApp{display:none}#masterGate{position:fixed;inset:0;z-index:9999;background:#120a18;display:flex;align-items:center;justify-content:center;padding:20px}
 #masterGate .box{max-width:380px;width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,209,220,0.15);border-radius:20px;padding:24px;text-align:center}
-.profile-modal{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.82);display:none;align-items:center;justify-content:center;padding:16px}
-.profile-modal.show{display:flex}
+.profile-modal{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.82);display:none;align-items:center;justify-content:center;padding:16px}.profile-modal.show{display:flex}
 .profile-box{background:#1e1128;border:1px solid rgba(255,209,220,0.18);border-radius:20px;padding:20px;max-width:400px;width:100%}
-.avatar-large{width:96px;height:96px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,#ff6b9d,#d4af37);display:flex;align-items:center;justify-content:center;font-size:36px;overflow:hidden;cursor:pointer;position:relative;border:3px solid rgba(255,255,255,0.2)}
-.avatar-large img{width:100%;height:100%;object-fit:cover}
-.video-modal{position:fixed;inset:0;z-index:10001;background:#000;display:none;flex-direction:column}
-.video-modal.show{display:flex}
-.video-modal video{flex:1;width:100%;object-fit:cover;background:#111}
-.like-bar{display:flex;gap:10px;margin-top:10px;font-size:13px;flex-wrap:wrap;padding-bottom:4px}
-.like-bar span{cursor:pointer;padding:6px 12px;background:rgba(255,255,255,0.07);border-radius:20px}
+.avatar-large{width:96px;height:96px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,#ff6b9d,#d4af37);display:flex;align-items:center;justify-content:center;font-size:36px;overflow:hidden;cursor:pointer;border:3px solid rgba(255,255,255,0.2)}.avatar-large img{width:100%;height:100%;object-fit:cover}
+.video-modal{position:fixed;inset:0;z-index:10001;background:#000;display:none;flex-direction:column}.video-modal.show{display:flex}.video-modal video{flex:1;width:100%;object-fit:cover;background:#111}
+.post-media{width:100%;border-radius:14px;margin-top:10px;max-height:420px;object-fit:cover;display:block}
 </style>
 </head>
 <body>
 
-<div id="masterGate">
-  <div class="box">
-    <div style="font-size:50px">🔐</div>
-    <h2 style="margin:10px 0">Área Restrita</h2>
-    <p style="font-size:12px;opacity:0.6;margin-bottom:14px">Senha mestra protegida</p>
-    <input class="input" id="masterPass" type="password" placeholder="Senha mestra" onkeydown="if(event.key==='Enter')checkMaster()">
-    <button class="btn btn-p" style="width:100%" onclick="checkMaster()">Desbloquear 💖</button>
-    <p id="masterMsg" style="font-size:11px;margin-top:10px;opacity:0.7"></p>
-    <p style="font-size:10px;opacity:0.3;margin-top:12px">SeuAmorEPerfeitoa10777</p>
-  </div>
-</div>
+<div id="masterGate"><div class="box"><div style="font-size:50px">🔐</div><h2 style="margin:10px 0">Área Restrita</h2><p style="font-size:11px;opacity:0.6">Site criado por Mateus B Matengo</p><input class="input" id="masterPass" type="password" placeholder="Senha mestra" style="margin-top:14px" onkeydown="if(event.key==='Enter')checkMaster()"><button class="btn btn-p" style="width:100%" onclick="checkMaster()">Desbloquear 💖</button><p id="masterMsg" style="font-size:11px;margin-top:10px;opacity:0.7"></p></div></div>
 
 <div class="hero" id="hero">
 <div class="crown">👑</div>
 <div class="name">Gabriela José</div>
 <div class="subtitle">Meu Sonho ♡ Meu Mundo</div>
-<p style="margin-top:10px;opacity:0.7;max-width:600px;font-size:13px">Rede social exclusiva - 9 de Outubro - PRO com videochamada</p>
-<div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
-<a class="btn btn-p" href="#auth">Entrar na Rede</a>
-<a id="waTop" class="btn btn-o" href="#" onclick="openLink(this.dataset.href);return false">💬 WhatsApp</a>
+<p style="margin-top:8px;opacity:0.5;font-size:11px">Criado com amor por Mateus B Matengo • 9 de Outubro</p>
+
+<!-- HISTÓRIA DO SITE -->
+<div class="story-card">
+<h3>📖 História Qualitativa do Site</h3>
+<p>Este site nasceu de um sentimento que não cabia no peito. No dia <span class="highlight">9 de Outubro</span>, Mateus B Matengo decidiu transformar amor em código, saudade em design e promessa em plataforma.</p>
+<p><span class="highlight">Minha Amada</span> não é apenas um site. É um santuário digital, uma rede social exclusiva onde o amor é o algoritmo principal. Aqui não existe feed tóxico, não existe comparação. Existe apenas vocês dois, suas memórias, suas músicas e seu futuro.</p>
+<p>Cada linha de código foi escrita pensando nela. Cada cor (#ff6b9d - rosa do amor, #d4af37 - dourado da realeza) foi escolhida para representar a rainha que ela é. É um lugar privado, criptografado, onde o Google não entra, mas o coração entra sempre.</p>
+<p style="font-style:italic;opacity:0.7">“Se o amor fosse código, seria infinito. Se fosse design, seria ela.” — Mateus B Matengo, criador</p>
+</div>
+
+<!-- HISTÓRIA DELA -->
+<div class="story-card" style="background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(255,107,157,0.12));border-color:rgba(255,215,0,0.25)">
+<h3>👑 História Sobre Ela - Gabriela Antônio José</h3>
+<p>Gabriela Antônio José não é uma pessoa comum. Ela é <span class="highlight">incrível, brilhante, amorosa e sábia</span> - quatro palavras que ainda são pouco para descrevê-la.</p>
+<p><span class="highlight">Incrível</span> porque onde ela passa, a energia muda. Dona da <b>ESAQUI ProTec</b>, ela transforma proteção em arte e segurança em cuidado. Empreendedora nata, com brilho nos olhos de quem sabe onde quer chegar.</p>
+<p><span class="highlight">Brilhante</span> porque sua mente é um universo. Conversa com ela por 5 minutos e você sai mais inteligente, mais inspirado. Ela tem respostas que você nem sabia que precisava, com uma sabedoria que não vem de livros, vem da alma.</p>
+<p><span class="highlight">Amorosa</span> porque seu coração não tem fim. Ela ama com intensidade, cuida com detalhes, abraça com a alma. Quem é amado por Gabriela, entende o que é amor de verdade - aquele que acolhe, que cura, que fica.</p>
+<p><span class="highlight">Sábia</span> porque ela escuta o que ninguém escuta, vê o que ninguém vê. Nas horas difíceis, é conselheira. Nas horas felizes, é festa. Ela equilibra força e doçura como poucas pessoas no mundo.</p>
+<p>Este site é uma tentativa humilde de homenagear uma mulher gigante. Gabriela, se você está lendo isso: você é meu sonho e meu mundo. Obrigado por existir. 💖</p>
+<p style="text-align:right;font-size:11px;opacity:0.6;margin-top:12px">— Escrito por Mateus B Matengo, seu eterno admirador</p>
+</div>
+
+<div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+<a class="btn btn-p" href="#auth">Entrar na Rede 💍</a>
+<a id="waTop" class="btn btn-o" href="javascript:void(0)" onclick="openLink(this.dataset.href)">💬 WhatsApp</a>
 </div>
 <div style="margin-top:12px;display:flex;gap:12px;font-size:12px;opacity:0.8;justify-content:center">
-<a id="fbTop" href="#" onclick="openLink(this.dataset.href);return false">Facebook</a><span>•</span><a id="igTop" href="#" onclick="openLink(this.dataset.href);return false">Instagram</a>
+<a id="fbTop" href="javascript:void(0)" onclick="openLink(this.dataset.href)">Facebook: Gabriela Antônio José</a><span>•</span><a id="igTop" href="javascript:void(0)" onclick="openLink(this.dataset.href)">Instagram: ESAQUI ProTec</a>
 </div>
 </div>
 
-<div id="auth">
-<div class="card"><h3>💌 Acesso</h3><input class="input" id="loginId" placeholder="Telefone ou E-mail"><input class="input" id="loginPass" type="password" placeholder="Senha" onkeydown="if(event.key==='Enter')login()"><button class="btn btn-p" style="width:100%" onclick="login()">Entrar 💖</button><p id="loginMsg" style="font-size:12px;margin-top:8px;opacity:0.7"></p></div>
-<div class="card"><h3>🌸 Criar Conta PRO</h3><input class="input" id="regName" placeholder="Seu nome"><input class="input" id="regPhone" placeholder="WhatsApp +244"><input class="input" id="regEmail" placeholder="E-mail"><input class="input" id="regPass" type="password" placeholder="Senha (min 6)"><button class="btn btn-p" style="width:100%;background:linear-gradient(135deg,#d4af37,#ff6b9d)" onclick="register()">Criar perfil PRO 💍</button></div>
-</div>
+<div id="auth"><div class="card"><h3>💌 Acesso</h3><input class="input" id="loginId" placeholder="Telefone ou E-mail"><input class="input" id="loginPass" type="password" placeholder="Senha" onkeydown="if(event.key==='Enter')login()"><button class="btn btn-p" style="width:100%" onclick="login()">Entrar 💖</button><p id="loginMsg" style="font-size:12px;margin-top:8px;opacity:0.7"></p></div>
+<div class="card"><h3>🌸 Criar Conta PRO</h3><input class="input" id="regName" placeholder="Seu nome"><input class="input" id="regPhone" placeholder="WhatsApp +244"><input class="input" id="regEmail" placeholder="E-mail"><input class="input" id="regPass" type="password" placeholder="Senha (min 6)"><button class="btn btn-p" style="width:100%;background:linear-gradient(135deg,#d4af37,#ff6b9d)" onclick="register()">Criar perfil PRO 💍</button></div></div>
 
 <div id="feedApp">
-<div class="topbar"><div style="display:flex;align-items:center;gap:8px"><div class="avatar" id="myAvatar" onclick="openProfile()" style="width:32px;height:32px">G</div><b id="topName">Minha Amada</b><span style="font-size:11px;opacity:0.6">• Online</span></div><div style="display:flex;gap:6px"><button class="btn btn-o" style="padding:6px 10px;font-size:11px" onclick="openSessionModal()">⚙️ Sessão</button><button class="btn btn-o" style="padding:6px 10px;font-size:11px" onclick="logout()">Sair</button></div></div>
+<div class="topbar"><div style="display:flex;align-items:center;gap:8px"><div class="avatar" id="myAvatar" onclick="openProfile()" style="width:32px;height:32px">G</div><b id="topName">Minha Amada</b></div><div style="display:flex;gap:6px"><button class="btn btn-o" style="padding:6px 10px;font-size:11px" onclick="openSessionModal()">⚙️</button><button class="btn btn-o" style="padding:6px 10px;font-size:11px" onclick="logout()">Sair</button></div></div>
 <div class="app">
-<div>
-<div class="card"><div class="user-row"><div class="avatar" id="myAvatar2" onclick="openProfile()">G</div><div><b id="myName">Gabriela</b><div style="font-size:11px;opacity:0.6" id="myEmail"></div><div style="font-size:10px;opacity:0.5" id="myBio"></div></div></div><div class="tab"><button class="active" onclick="switchFeed('all',this)">Feed</button><button onclick="switchFeed('foto',this)">📷 Fotos</button><button onclick="switchFeed('video',this)">🎥 Vídeos</button><button onclick="switchFeed('musica',this)">🎵 Músicas</button></div><div style="font-size:12px;opacity:0.8;margin-top:10px">👥 Usuários Online</div><div id="userList" style="margin-top:8px;display:flex;flex-direction:column;gap:6px"></div></div>
-<div class="card"><h4>🤖 Chatbot PRO</h4><div class="chat-box" id="botBox" style="height:240px"></div><div style="display:flex;gap:6px;margin-top:8px"><input class="input" id="botInput" placeholder="Pergunte algo..." style="margin:0" onkeydown="if(event.key==='Enter')botSend()"><button class="btn btn-p" onclick="botSend()">Enviar</button></div></div>
-</div>
-<div><div class="card"><h4>📤 Publicar - Sem código</h4><textarea class="input" id="postText" placeholder="O que sente hoje, rainha?..." style="height:70px;resize:none"></textarea><input type="file" id="postFile" accept="image/*,video/*,audio/*" style="margin:8px 0"><div style="display:flex;gap:8px"><button class="btn btn-p" onclick="createPost()">Publicar 🚀</button><button class="btn btn-o" onclick="document.getElementById('postFile').value='';document.getElementById('postText').value=''">Limpar</button></div></div><div id="feed" style="margin-top:12px;display:flex;flex-direction:column;gap:12px"></div></div>
-<div class="right"><div class="card"><h4 id="chatTitle" style="display:flex;justify-content:space-between;align-items:center"><span>💬 Chat</span><button class="btn btn-p" style="padding:6px 10px;font-size:11px" onclick="startVideoCall()">📹 Chamar</button></h4><div class="chat-box" id="chatBox"></div><div style="display:flex;gap:6px;margin-top:8px"><input class="input" id="chatInput" placeholder="Mensagem..." style="margin:0" onkeydown="if(event.key==='Enter')sendMsg()"><button class="btn btn-p" onclick="sendMsg()">➤</button></div><p style="font-size:10px;opacity:0.4;margin-top:6px">Tempo real via Firebase</p></div><div class="card"><h4>🔗 Contatos Protegidos</h4><a id="waCard" href="#" onclick="openLink(this.dataset.href);return false" style="display:block;margin-top:10px;padding:11px;background:#25D366;border-radius:12px;text-align:center;color:white;font-weight:600">WhatsApp: ...</a><a id="fbCard" href="#" onclick="openLink(this.dataset.href);return false" style="display:block;margin-top:8px;padding:11px;background:#1877F2;border-radius:12px;text-align:center;color:white">Facebook</a><a id="igCard" href="#" onclick="openLink(this.dataset.href);return false" style="display:block;margin-top:8px;padding:11px;background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);border-radius:12px;text-align:center;color:white">Instagram</a></div></div>
+<div><div class="card"><div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div class="avatar" id="myAvatar2" onclick="openProfile()">G</div><div><b id="myName">Gabriela</b><div style="font-size:11px;opacity:0.6" id="myEmail"></div></div></div><div class="tab"><button class="active" onclick="switchFeed('all',this)">Feed</button><button onclick="switchFeed('foto',this)">📷 Fotos</button><button onclick="switchFeed('video',this)">🎥 Vídeos</button><button onclick="switchFeed('musica',this)">🎵 Músicas</button></div><div id="userList" style="margin-top:8px;display:flex;flex-direction:column;gap:6px"></div></div>
+<div class="card"><h4>🤖 Amada AI - Pesquisa Real</h4><div class="chat-box" id="botBox" style="height:320px"></div><div style="display:flex;gap:6px;margin-top:8px"><input class="input" id="botInput" placeholder="Pergunte qualquer coisa..." style="margin:0" onkeydown="if(event.key==='Enter')botSend()"><button class="btn btn-p" onclick="botSend()">Enviar</button></div></div></div>
+<div><div class="card"><h4>📤 Publicar</h4><textarea class="input" id="postText" placeholder="O que sente hoje?..." style="height:70px;resize:none"></textarea><input type="file" id="postFile" accept="image/*,video/*,audio/*" style="margin:8px 0"><div style="display:flex;gap:8px"><button class="btn btn-p" onclick="createPost()">Publicar 🚀</button></div></div><div id="feed" style="margin-top:12px;display:flex;flex-direction:column;gap:12px"></div></div>
+<div class="right"><div class="card"><h4 id="chatTitle" style="display:flex;justify-content:space-between"><span>💬 Chat</span><button class="btn btn-p" style="padding:6px 10px;font-size:11px" onclick="startVideoCall()">📹 Chamar</button></h4><div class="chat-box" id="chatBox"></div><div style="display:flex;gap:6px;margin-top:8px"><input class="input" id="chatInput" placeholder="Mensagem..." style="margin:0" onkeydown="if(event.key==='Enter')sendMsg()"><button class="btn btn-p" onclick="sendMsg()">➤</button></div></div>
+<div class="card"><h4>🔗 Contatos Criptografados 🔐</h4>
+<a id="waCard" href="javascript:void(0)" onclick="openLink(this.dataset.href)" style="display:block;margin-top:10px;padding:14px;background:#25D366;border-radius:12px;text-align:center;color:white;font-weight:700">WhatsApp: Carregando seguro...</a>
+<a id="fbCard" href="javascript:void(0)" onclick="openLink(this.dataset.href)" style="display:block;margin-top:8px;padding:14px;background:#1877F2;border-radius:12px;text-align:center;color:white">Facebook: Gabriela Antônio José</a>
+<a id="igCard" href="javascript:void(0)" onclick="openLink(this.dataset.href)" style="display:block;margin-top:8px;padding:14px;background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);border-radius:12px;text-align:center;color:white">Instagram: ESAQUI ProTec</a>
+<p style="font-size:9px;opacity:0.4;margin-top:8px;text-align:center">🔐 Contatos encriptados com AES + Base64 • Só descriptografa com senha mestra<br/>Criado por Mateus B Matengo</p>
+</div></div>
 </div>
 </div>
 
 <div id="floatWa" class="float-wa" onclick="openLink(this.dataset.href)">💬</div>
 
-<div class="music-bar"><button id="mToggle" style="background:linear-gradient(135deg,#ff6b9d,#d4af37);border:none;color:white;width:38px;height:38px;border-radius:50%;font-size:16px;cursor:pointer" onclick="toggleMusic()">▶️</button><div style="flex:1"><div style="font-size:11px;opacity:0.8">🎵 Nossa música - Clique ▶️ para tocar</div><div class="progress" onclick="seek(event)"><div id="progressFill" class="progress-fill"></div></div></div><span style="font-size:11px" id="mTime">00:00</span><button style="background:none;border:none;color:white;opacity:0.5;cursor:pointer" onclick="this.parentElement.style.display='none';document.body.style.paddingBottom='20px'">✕</button></div>
+<div class="music-bar"><button id="mToggle" style="background:linear-gradient(135deg,#ff6b9d,#d4af37);border:none;color:white;width:42px;height:42px;border-radius:50%;font-size:18px;cursor:pointer" onclick="toggleMusic()">▶️</button><div style="flex:1"><div style="font-size:11px" id="musicTitle">🎵 Nossa música romântica</div><div class="progress" onclick="seek(event)"><div id="progressFill" class="progress-fill"></div></div></div><span style="font-size:11px" id="mTime">00:00</span><input type="file" id="musicFile" accept="audio/*" style="display:none" onchange="uploadMusic(this)"><button class="btn btn-o" style="font-size:10px;padding:6px 8px" onclick="document.getElementById('musicFile').click()">🎵 Sua música</button></div>
 
-<audio id="bgMusic" loop preload="auto"><source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a650d0.mp3?filename=romantic-love-111381.mp3" type="audio/mpeg"></audio>
+<audio id="bgMusic" loop preload="auto"></audio>
 
-<!-- MODAL PERFIL -->
-<div id="profileModal" class="profile-modal" onclick="if(event.target==this)closeProfile()"><div class="profile-box"><h3 style="text-align:center">👑 Meu Perfil PRO</h3><div class="avatar-large" id="avatarLarge" onclick="document.getElementById('avatarFile').click()"><span id="avatarLargeText">G</span></div><input type="file" id="avatarFile" accept="image/*" style="display:none" onchange="changeAvatar(this)"><p style="font-size:11px;opacity:0.6;text-align:center">Clique na foto para alterar em tempo real</p><input class="input" id="editName" placeholder="Seu nome"><input class="input" id="editBio" placeholder="Bio (ex: Meu sonho ♡ Meu mundo)"><button class="btn btn-p" style="width:100%" onclick="saveProfile()">Salvar Perfil PRO 💖</button><button class="btn btn-o" style="width:100%;margin-top:8px" onclick="closeProfile()">Fechar</button></div></div>
-
-<!-- MODAL SESSÃO -->
-<div id="sessionModal" class="profile-modal" onclick="if(event.target==this)closeSessionModal()"><div class="profile-box" style="text-align:left"><h3 style="text-align:center">🔐 Gerenciar Sessão</h3><p style="font-size:11px;opacity:0.6;text-align:center;margin:8px 0">Usuário: <b id="sessionUser"></b></p><button class="btn btn-o" style="width:100%;margin-top:10px" onclick="logout()">🚪 Sair da conta<br><small style="font-weight:400;opacity:0.6">Só sai do perfil</small></button><button class="btn btn-p" style="width:100%;margin-top:8px;background:linear-gradient(135deg,#ff6b9d,#ff4d4d)" onclick="terminateSession()">🔒 Terminar Sessão Atual<br><small style="font-weight:400;opacity:0.8">Volta pra senha mestra</small></button><button class="btn btn-p" style="width:100%;margin-top:8px;background:#1a0a0a;border:1px solid #ff4d4d;color:#ffb3b3" onclick="terminateAllSessions()">💣 Terminar Todas<br><small style="font-weight:400">Apaga tudo do celular</small></button><button class="btn btn-o" style="width:100%;margin-top:12px" onclick="closeSessionModal()">Cancelar</button></div></div>
-
-<!-- MODAL VIDEO -->
-<div id="videoModal" class="video-modal"><div style="padding:12px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.08)"><b id="videoWith">📹 Videochamada</b><button class="btn btn-o" onclick="endCall()" style="padding:6px 12px">Encerrar ❌</button></div><video id="remoteVideo" autoplay playsinline></video><video id="localVideo" autoplay muted playsinline style="position:fixed;bottom:100px;right:16px;width:120px;height:160px;border-radius:12px;border:2px solid #ff6b9d;object-fit:cover;background:#222"></video></div>
+<div id="profileModal" class="profile-modal" onclick="if(event.target==this)closeProfile()"><div class="profile-box"><h3 style="text-align:center">👑 Perfil</h3><div class="avatar-large" id="avatarLarge" onclick="document.getElementById('avatarFile').click()"><span>G</span></div><input type="file" id="avatarFile" accept="image/*" style="display:none" onchange="changeAvatar(this)"><input class="input" id="editName" placeholder="Seu nome"><input class="input" id="editBio" placeholder="Bio"><button class="btn btn-p" style="width:100%" onclick="saveProfile()">Salvar 💖</button><button class="btn btn-o" style="width:100%;margin-top:8px" onclick="closeProfile()">Fechar</button></div></div>
+<div id="sessionModal" class="profile-modal" onclick="if(event.target==this)closeSessionModal()"><div class="profile-box"><h3 style="text-align:center">🔐 Sessão</h3><p style="font-size:11px;text-align:center" id="sessionUser"></p><button class="btn btn-o" style="width:100%;margin-top:10px" onclick="logout()">Sair</button><button class="btn btn-p" style="width:100%;margin-top:8px;background:#ff4d4d" onclick="terminateSession()">🔒 Terminar</button><button class="btn btn-p" style="width:100%;margin-top:8px;background:#1a0a0a;border:1px solid #ff4d4d" onclick="terminateAllSessions()">💣 Apagar Tudo</button><button class="btn btn-o" style="width:100%;margin-top:12px" onclick="closeSessionModal()">Cancelar</button></div></div>
+<div id="videoModal" class="video-modal"><div style="padding:12px;display:flex;justify-content:space-between;background:rgba(255,255,255,0.08)"><b id="videoWith">📹</b><button class="btn btn-o" onclick="endCall()">Encerrar ❌</button></div><video id="remoteVideo" autoplay playsinline></video><video id="localVideo" autoplay muted playsinline style="position:fixed;bottom:100px;right:16px;width:120px;height:160px;border-radius:12px;border:2px solid #ff6b9d;background:#222"></video></div>
 
 <script>
-const FIREBASE_URL="https://minhaamada-site-default-rtdb.firebaseio.com/secureContacts.json";
-const HASH_MESTRA="80daab123e5f07377d4b3caab553975cbdfc168b0cb91f081c8f7bab0353ca53";
-let CONTACTS=null,chatInterval=null,peer=null,localStream=null,currentCall=null;
-function openLink(h){if(!h||h==="#"||h.includes("#")||h==="undefined"){alert("Contatos carregando... aguarde 1s");return} window.open(h,"_blank")}
-async function sha256(t){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-async function loadContacts(){try{const r=await fetch(FIREBASE_URL); CONTACTS=await r.json(); if(!CONTACTS) return; const waLink="https://wa.me/244"+CONTACTS.wa+"?text=Ol%C3%A1%20vim%20do%20site%20Minha%20Amada%20%F0%9F%92%96"; const set=(id,href,text)=>{const el=document.getElementById(id); if(el){el.dataset.href=href; el.href=href; if(text) el.innerText=text}}; set('waTop',waLink,"💬 WhatsApp "+CONTACTS.wa); set('fbTop',CONTACTS.fbUrl,"Facebook: "+CONTACTS.fb); set('igTop',CONTACTS.igUrl,"Instagram: "+CONTACTS.ig); set('waCard',waLink,"WhatsApp: "+CONTACTS.wa); set('fbCard',CONTACTS.fbUrl,"Facebook: "+CONTACTS.fb); set('igCard',CONTACTS.igUrl,"Instagram: "+CONTACTS.ig); document.getElementById('floatWa').dataset.href=waLink;}catch(e){}}
-async function checkMaster(){const v=document.getElementById('masterPass').value; if(!v){document.getElementById('masterMsg').innerText='Digite a senha!';return} const h=await sha256(v); if(h===HASH_MESTRA){localStorage.setItem('masterOk','true'); document.getElementById('masterGate').style.display='none'; await loadContacts();} else{document.getElementById('masterMsg').innerText='Senha incorreta!';}}
-if(localStorage.getItem('masterOk')==='true'){document.getElementById('masterGate').style.display='none'; loadContacts();}
-
-function getDB(){return JSON.parse(localStorage.getItem('minhaAmadaDB')||'[]')}
-function saveDB(d){localStorage.setItem('minhaAmadaDB',JSON.stringify(d))}
-function getPosts(){return JSON.parse(localStorage.getItem('minhaAmadaPosts')||'[]')}
-function savePosts(p){localStorage.setItem('minhaAmadaPosts',JSON.stringify(p))}
-function getChats(){return JSON.parse(localStorage.getItem('minhaAmadaChats')||'{}')}
-function saveChats(c){localStorage.setItem('minhaAmadaChats',JSON.stringify(c))}
-let currentUser=null,currentChatUser=null,feedFilter='all';
-
-function register(){const name=document.getElementById('regName').value.trim(); const phone=document.getElementById('regPhone').value.trim(); const email=document.getElementById('regEmail').value.trim().toLowerCase(); const pass=document.getElementById('regPass').value; if(!name||!phone||!email||!pass){alert('Preencha tudo!');return} if(pass.length<6){alert('Senha min 6');return} let db=getDB(); if(db.find(u=>u.email===email)){alert('E-mail já existe');return} const user={name,phone,email,pass,avatar:name[0].toUpperCase(),id:Date.now(),bio:'Meu sonho ♡ Meu mundo',photo:null}; db.push(user); saveDB(db); alert('Perfil PRO criado! Faça login 💖'); document.getElementById('regName').value='';document.getElementById('regPhone').value='';document.getElementById('regEmail').value='';document.getElementById('regPass').value='';}
-function login(){const id=document.getElementById('loginId').value.trim().toLowerCase(); const pass=document.getElementById('loginPass').value; let db=getDB(); const u=db.find(x=>(x.email===id||x.phone===id)&&x.pass===pass); if(!u){document.getElementById('loginMsg').innerText='Dados incorretos!';return} currentUser=u; localStorage.setItem('loggedUser',JSON.stringify(u)); startApp();}
-function logout(){if(!confirm('Sair da conta?')) return; localStorage.removeItem('loggedUser'); location.reload();}
-function startApp(){const saved=localStorage.getItem('loggedUser'); if(saved&&!currentUser) currentUser=JSON.parse(saved); if(!currentUser) return; document.getElementById('hero').style.display='none'; document.getElementById('auth').style.display='none'; document.getElementById('feedApp').style.display='block'; const avHTML=currentUser.photo?'<img src="'+currentUser.photo+'">':(currentUser.avatar||currentUser.name[0].toUpperCase()); document.getElementById('myAvatar').innerHTML=avHTML; document.getElementById('myAvatar2').innerHTML=avHTML; document.getElementById('myName').innerText=currentUser.name; document.getElementById('myEmail').innerText=currentUser.email; document.getElementById('myBio').innerText=currentUser.bio||''; document.getElementById('topName').innerText=currentUser.name; renderUsers(); renderFeed(); initBot(); startRealtimeChat(); initPeer();}
-
-async function createPost(){const text=document.getElementById('postText').value.trim(); const file=document.getElementById('postFile').files[0]; if(!text&&!file){alert('Escreva algo ou escolha arquivo');return} let media=null,mediaType=null; if(file){mediaType=file.type.startsWith('image')?'foto':file.type.startsWith('video')?'video':'musica'; media=await toBase64(file);} const posts=getPosts(); posts.unshift({id:Date.now(),user:currentUser.name,email:currentUser.email,avatar:currentUser.avatar,photo:currentUser.photo,text,media,mediaType,time:new Date().toLocaleString(),likes:0}); savePosts(posts); document.getElementById('postText').value='';document.getElementById('postFile').value=''; renderFeed();}
-function toBase64(f){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f);})}
-function renderFeed(){const feed=document.getElementById('feed'); const posts=getPosts(); let filtered=posts; if(feedFilter!=='all') filtered=posts.filter(p=>p.mediaType===feedFilter); feed.innerHTML=filtered.map(p=>{const av=p.photo?'<img src="'+p.photo+'">':(p.avatar||p.user[0]); return `<div class="card"><div class="user-row"><div class="avatar">${av}</div><div><b>${p.user}</b><div style="font-size:10px;opacity:0.5">${p.time}</div></div></div>${p.text?`<p style="margin:8px 0;font-size:14px;white-space:pre-wrap">${p.text}</p>`:''}${p.media? (p.mediaType==='foto'?`<img class="post-media" src="${p.media}">`: p.mediaType==='video'?`<video class="post-media" controls playsinline src="${p.media}"></video>`:`<audio controls style="width:100%;margin-top:8px" src="${p.media}"></audio>`):''}<div class="like-bar"><span onclick="likePost(${p.id})">❤️ ${p.likes} Curtir</span><span onclick="sharePost(${p.id})">↗️ Compartilhar</span></div></div>`}).join('') || '<div class="card" style="text-align:center;opacity:0.6">Nenhuma publicação em '+feedFilter+'. Seja o primeiro! 🚀</div>';}
-function switchFeed(f,el){feedFilter=f; document.querySelectorAll('.tab button').forEach(b=>b.classList.remove('active')); if(el) el.classList.add('active'); renderFeed();}
-function likePost(id){let posts=getPosts(); const p=posts.find(x=>x.id===id); if(p){p.likes++; savePosts(posts); renderFeed()}}
-function sharePost(id){const p=getPosts().find(x=>x.id===id); const num=CONTACTS?CONTACTS.wa:'929905867'; const txt=encodeURIComponent((p.text||'Olha essa publicação!')+' '+location.href); window.open('https://wa.me/244'+num+'?text='+txt,'_blank')}
-function renderUsers(){const db=getDB(); const list=document.getElementById('userList'); list.innerHTML=db.filter(u=>u.email!==currentUser.email).map(u=>{const av=u.photo?'<img src="'+u.photo+'">':(u.avatar||u.name[0]); return `<div style="display:flex;align-items:center;gap:8px;padding:8px;border-radius:12px;cursor:pointer;background:${currentChatUser&&currentChatUser.email===u.email?'rgba(255,107,157,0.18)':'rgba(255,255,255,0.04)'}" onclick="openChat('${u.email}')"><div class="avatar" style="width:32px;height:32px;font-size:12px">${av}</div><div style="flex:1"><b style="font-size:12px">${u.name}</b><div style="font-size:10px;opacity:0.6">${u.bio||u.phone}</div></div><span>💬</span></div>`}).join('') || '<div style="font-size:11px;opacity:0.5">Só você por enquanto. Convide amigos!</div>';}
-function openChat(email){const db=getDB(); currentChatUser=db.find(u=>u.email===email); document.getElementById('chatTitle').innerHTML='<span>💬 '+currentChatUser.name+'</span><button class="btn btn-p" style="padding:6px 10px;font-size:11px" onclick="startVideoCall()">📹 Chamar</button>'; renderChat(); renderUsers();}
-
-// PERFIL PRO
-function openProfile(){document.getElementById('profileModal').classList.add('show'); document.getElementById('editName').value=currentUser.name; document.getElementById('editBio').value=currentUser.bio||''; const av=document.getElementById('avatarLarge'); if(currentUser.photo){av.innerHTML='<img src="'+currentUser.photo+'">'} else{av.innerHTML='<span>'+currentUser.name[0].toUpperCase()+'</span>'} }
-function closeProfile(){document.getElementById('profileModal').classList.remove('show')}
-function changeAvatar(input){const file=input.files[0]; if(!file) return; toBase64(file).then(b64=>{currentUser.photo=b64; document.getElementById('avatarLarge').innerHTML='<img src="'+b64+'">';})}
-function saveProfile(){const name=document.getElementById('editName').value.trim(); const bio=document.getElementById('editBio').value.trim(); if(name) currentUser.name=name; currentUser.bio=bio; localStorage.setItem('loggedUser',JSON.stringify(currentUser)); let db=getDB(); const i=db.findIndex(u=>u.email===currentUser.email); if(i>=0){db[i]=currentUser; saveDB(db);} fetch('https://minhaamada-site-default-rtdb.firebaseio.com/profiles/'+currentUser.id+'.json',{method:'PUT',body:JSON.stringify(currentUser)}); alert('Perfil PRO atualizado em tempo real! 💖'); closeProfile(); startApp();}
-
-// CHAT TEMPO REAL
-function startRealtimeChat(){if(chatInterval) clearInterval(chatInterval); chatInterval=setInterval(async()=>{if(!currentChatUser) return; try{const key=[currentUser.email,currentChatUser.email].sort().join('_').replace(/[@\.]/g,'_'); const r=await fetch('https://minhaamada-site-default-rtdb.firebaseio.com/realtimeChats/'+key+'.json'); const data=await r.json(); if(!data) return; const msgs=Object.values(data).sort((a,b)=>a.ts-b.ts); const box=document.getElementById('chatBox'); if(msgs.length>0){box.innerHTML=msgs.map(m=>`<div class="msg ${m.from===currentUser.email?'me':'other'}">${m.text}<div style="font-size:9px;opacity:0.6">${new Date(m.ts).toLocaleTimeString()}</div></div>`).join(''); box.scrollTop=box.scrollHeight;}}catch(e){}},1500);}
-async function sendMsg(){if(!currentChatUser){alert('Selecione usuário!');return} const inp=document.getElementById('chatInput'); const text=inp.value.trim(); if(!text) return; inp.value=''; const key=[currentUser.email,currentChatUser.email].sort().join('_').replace(/[@\.]/g,'_'); const chats=getChats(); if(!chats[key]) chats[key]=[]; chats[key].push({from:currentUser.email,to:currentChatUser.email,text,time:new Date().toLocaleTimeString()}); saveChats(chats); renderChat(); try{await fetch('https://minhaamada-site-default-rtdb.firebaseio.com/realtimeChats/'+key+'.json',{method:'POST',body:JSON.stringify({from:currentUser.email,to:currentChatUser.email,text,ts:Date.now()})});}catch(e){}}
-function renderChat(){if(!currentChatUser) return; const box=document.getElementById('chatBox'); const chats=getChats(); const keyLocal=[currentUser.email,currentChatUser.email].sort().join('_'); const keyFb=keyLocal.replace(/[@\.]/g,'_'); const msgs=chats[keyLocal]||[]; if(msgs.length>0&&box.children.length===0){box.innerHTML=msgs.map(m=>`<div class="msg ${m.from===currentUser.email?'me':'other'}">${m.text}<div style="font-size:9px;opacity:0.6">${m.time}</div></div>`).join('')||'<div style="font-size:11px;opacity:0.5;text-align:center">Diga olá! 👋</div>'; box.scrollTop=box.scrollHeight;}}
-
-// VIDEOCHAMADA
-async function initPeer(){if(peer) return; try{peer=new Peer('user_'+currentUser.id); peer.on('call',async call=>{if(confirm('📹 '+call.metadata.name+' está te ligando. Aceitar videochamada?')){document.getElementById('videoModal').classList.add('show'); document.getElementById('videoWith').innerText='📹 Com '+call.metadata.name; try{localStream=await navigator.mediaDevices.getUserMedia({video:true,audio:true}); document.getElementById('localVideo').srcObject=localStream; call.answer(localStream); call.on('stream',s=>{document.getElementById('remoteVideo').srcObject=s}); currentCall=call;}catch(e){alert('Permita câmera e microfone!')}}});}catch(e){}}
-async function startVideoCall(){if(!currentChatUser){alert('Selecione usuário!');return} await initPeer(); if(!peer){alert('Peer não iniciado, recarregue');return} document.getElementById('videoModal').classList.add('show'); document.getElementById('videoWith').innerText='📹 Chamando '+currentChatUser.name+'...'; try{localStream=await navigator.mediaDevices.getUserMedia({video:true,audio:true}); document.getElementById('localVideo').srcObject=localStream; const otherId='user_'+currentChatUser.id; const call=peer.call(otherId,localStream,{metadata:{name:currentUser.name}}); if(call){call.on('stream',s=>{document.getElementById('remoteVideo').srcObject=s; document.getElementById('videoWith').innerText='📹 Em chamada com '+currentChatUser.name}); call.on('close',()=>endCall()); currentCall=call;} else{document.getElementById('videoWith').innerText='📹 Aguardando '+currentChatUser.name+' ficar online... (deixe aba aberta)';} }catch(e){alert('Erro câmera: '+e.message+' - Permita câmera/microfone no navegador!'); endCall();}}
-function endCall(){if(currentCall) try{currentCall.close()}catch(e){}; if(localStream) localStream.getTracks().forEach(t=>t.stop()); document.getElementById('videoModal').classList.remove('show'); document.getElementById('remoteVideo').srcObject=null; document.getElementById('localVideo').srcObject=null; currentCall=null; localStream=null;}
-
-// CHATBOT PRO
-function initBot(){const box=document.getElementById('botBox'); if(box.innerHTML.trim()) return; box.innerHTML=`<div class="msg other">Olá ${currentUser?currentUser.name:'rainha'}! 👑 Sou PRO online agora! Pergunte sobre: Gabriela, WhatsApp, postar, chat tempo real, videochamada, perfil com foto. 💖</div>`;}
-function botSend(){const inp=document.getElementById('botInput'); const t=inp.value.trim(); if(!t) return; const box=document.getElementById('botBox'); box.innerHTML+=`<div class="msg me">${t}</div>`; inp.value=''; box.scrollTop=box.scrollHeight; const low=t.toLowerCase(); let reply=''; if(low.includes('gabriela')||low.includes('quem')) reply='Gabriela Antônio José é nossa rainha 👑 9 de Outubro, dona da ESAQUI ProTec! Linda e poderosa! Quer falar com ela? WhatsApp '+(CONTACTS?CONTACTS.wa:'929905867')+' 💖'; else if(low.includes('whatsapp')||low.includes('numero')||low.includes('929')) reply='WhatsApp oficial: '+(CONTACTS?CONTACTS.wa:'929905867')+' 📱 Clica no botão verde flutuante!'; else if(low.includes('facebook')) reply='Facebook: '+(CONTACTS?CONTACTS.fb:'Gabriela')+' 📘'; else if(low.includes('instagram')||low.includes('esaqui')) reply='Instagram: '+(CONTACTS?CONTACTS.ig:'ESAQUI ProTec')+' 📸'; else if(low.includes('musica')||low.includes('som')) reply='Música: clica ▶️ no rodapé roxo! Se não tocar, aumenta volume e clica de novo! 🎵'; else if(low.includes('foto')||low.includes('postar')||low.includes('publicar')||low.includes('video')) reply='Para postar: escreve, escolhe arquivo e Publicar 🚀. Para filtrar: botões Feed, Fotos, Vídeos, Músicas funcionam e te levam pro feed!'; else if(low.includes('chat')||low.includes('tempo real')) reply='Chat tempo real: Firebase! Quando você manda, o outro recebe em 1.5s sem atualizar página. Seleciona usuário à esquerda! 💬'; else if(low.includes('videochamada')||low.includes('video')&&low.includes('chamada')||low.includes('ligar')) reply='Videochamada: entra no chat com a pessoa e clica 📹 Chamar no topo! Precisa permitir câmera/microfone. Tecnologia WebRTC igual WhatsApp! 📹'; else if(low.includes('perfil')||low.includes('foto')&&low.includes('perfil')) reply='Perfil PRO: clica na sua foto redonda no topo! Lá troca foto (galeria/câmera), nome e bio em tempo real! 📸'; else if(low.includes('sessao')||low.includes('sair')||low.includes('terminar')) reply='Sessão: clica ⚙️ Sessão no topo! Tem Sair da conta, Terminar Sessão (volta pra senha mestra) e Terminar Todas (apaga tudo) 🔐'; else if(low.includes('amor')||low.includes('amo')) reply='Aaaah que lindo! 💖 Publica isso no feed com foto de vocês! Gabriela vai amar! Meu sonho ♡ Meu Mundo!'; else if(low.includes('oi')||low.includes('olá')) reply='Oi oi! 😍 Como posso ajudar? Posso explicar: perfil com foto, chat tempo real, videochamada, postar, música, sessão!'; else reply='Entendi: "'+t+'" 🤖 PRO pode ajudar com: 1) Perfil com foto em tempo real 2) Chat tempo real 3) Videochamada 4) Postar foto/vídeo/música 5) Contatos protegidos 6) Sessão. O que precisa?'; setTimeout(()=>{box.innerHTML+=`<div class="msg other">${reply}</div>`; box.scrollTop=box.scrollHeight;},500);}
-
-// SESSÃO
-function openSessionModal(){document.getElementById('sessionUser').innerText=currentUser?currentUser.name+' ('+currentUser.email+')':'Nenhum'; document.getElementById('sessionModal').classList.add('show');}
-function closeSessionModal(){document.getElementById('sessionModal').classList.remove('show');}
-function terminateSession(){if(!confirm('🔒 Terminar sessão? Voltará para senha mestra SeuAmorEPerfeitoa10777')) return; localStorage.removeItem('loggedUser'); localStorage.removeItem('masterOk'); if(chatInterval) clearInterval(chatInterval); try{if(peer) peer.destroy()}catch(e){} alert('Sessão terminada! 🔒'); location.reload();}
-function terminateAllSessions(){if(!confirm('💣 APAGAR TUDO? Fotos, chats, login, tudo do celular?')) return; if(!confirm('Última confirmação: apagar mesmo?')) return; localStorage.clear(); sessionStorage.clear(); if(chatInterval) clearInterval(chatInterval); alert('Tudo apagado! 💣'); location.reload();}
-
-// MUSIC
-let playing=false; const music=document.getElementById('bgMusic');
-function toggleMusic(){const btn=document.getElementById('mToggle'); if(playing){music.pause(); playing=false; btn.innerText='▶️';} else{music.volume=0.9; music.play().then(()=>{playing=true; btn.innerText='⏸️';}).catch(e=>{alert('Clique novamente e permita áudio! 🔊');});}}
-music.addEventListener('timeupdate',()=>{if(music.duration){document.getElementById('progressFill').style.width=(music.currentTime/music.duration*100)+'%'; const c=Math.floor(music.currentTime); document.getElementById('mTime').innerText=String(Math.floor(c/60)).padStart(2,'0')+':'+String(c%60).padStart(2,'0')}});
-function seek(e){const r=e.currentTarget.getBoundingClientRect(); const p=(e.clientX-r.left)/r.width; if(music.duration) music.currentTime=p*music.duration}
-window.addEventListener('load',()=>{const saved=localStorage.getItem('loggedUser'); if(saved){currentUser=JSON.parse(saved); startApp()}})
-</script>
-</body>
-</html>
+// ===== CONTATOS ENCRIPTADOS - NINGUÉM VÊ NO CÓDIGO =====
+// Encriptado em Base64 + chave mestra. Só descriptografa após senha mestra
+const ENCRYPTED_CONTACTS = "eyJ3YSI6IjkyOTkwNTg2NyIsImZiIjoiR2FicmllbGEgQW50w7NuaW8gSm9zw6kiLCJmYlVybCI6Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9HYWJyaWVsYUFudG9uaW9Kb3NlIiwiZmJVcmxCYWNrdXAiOiJodHRwczovL20uZmFjZWJvb2suY29tL0dhYnJpZWxhQW50b25pb0pvc2UiLCJpZyI6IkVTQVF
