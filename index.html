@@ -7,49 +7,33 @@
 </head>
 <body style="font-family: sans-serif; padding: 20px;">
 <h2>🔐 Área Restrita</h2>
-
 <input id="senha" type="password" placeholder="Senha mestra" style="padding:10px; width:100%; max-width:300px;">
 <button onclick="entrar()" style="padding:10px;">Desbloquear</button>
-
 <div id="resultado" style="margin-top:20px; padding:15px; border:1px solid #ddd; display:none;"></div>
-
 <script>
 const FIREBASE = "https://minhaamada-site-default-rtdb.firebaseio.com";
 const HASH_SENHA = "80daab123e5f07377d4b3caab553975cbdfc168b0cb91f081c8f7bab0353ca53";
 const HASH_EMAIL = "5049deae6644ef4bcbfc443554377caf3908e2ac0a00fa4fcc369aba9b961afa";
-
 async function sha256(t){
   const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
   return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
-
 async function entrar(){
   const s = document.getElementById("senha").value;
   const h = await sha256(s);
-  
-  if(h !== HASH_SENHA){
-    alert("Senha incorreta!");
-    return;
-  }
-
-  // Senha correta -> busca contatos do Firebase (não estão mais no código)
+  if(h !== HASH_SENHA){ alert("Senha incorreta!"); return; }
   const res = await fetch(`${FIREBASE}/secureContacts.json`);
   const c = await res.json();
-
-  // Verifica e-mail pelo hash também
   const emailHashCheck = await sha256(c.adminEmail);
-  
   document.getElementById("resultado").style.display = "block";
   document.getElementById("resultado").innerHTML = `
-    <b>✅ Desbloqueado com sucesso!</b><br><br>
-    <b>Contatos carregados do Firebase:</b><br>
+    <b>✅ Desbloqueado!</b><br><br>
     WhatsApp: ${c.wa}<br>
     Facebook: ${c.fb}<br>
     Instagram: ${c.ig}<br><br>
     <b>Admin:</b> ${c.adminEmail}<br>
-    <small>Hash verificado: ${emailHashCheck === HASH_EMAIL ? "✔ Correto" : "✖ Erro"}</small>
+    <small>Hash: ${emailHashCheck === HASH_EMAIL ? "✔" : "✖"}</small>
   `;
-  
   localStorage.setItem("logado", "true");
 }
 </script>
